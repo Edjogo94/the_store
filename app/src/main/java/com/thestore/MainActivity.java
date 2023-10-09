@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private boolean validarCredenciales(String email, String contrasena) {
-        Sqlite_OpenHelper dbHelper = new Sqlite_OpenHelper(MainActivity.this, getResources().getString(R.string.DATABASE_NAME), null, 1);
+        Sqlite_OpenHelper dbHelper = new Sqlite_OpenHelper(getApplicationContext(), getResources().getString(R.string.DATABASE_NAME), null, 1);
         return dbHelper.login(email, contrasena);
     }
     }

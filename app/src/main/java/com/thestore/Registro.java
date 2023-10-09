@@ -56,7 +56,6 @@ public class Registro extends AppCompatActivity {
                 } else {
 
                     long resultado = dbHelper.insertUser(nombreUsuario, email, nombreTienda, descripcionTienda, contrasena);
-                    Toast.makeText(getApplicationContext(), "Res: "+resultado, Toast.LENGTH_SHORT).show();
                     if (resultado != -1) {
                         Toast.makeText(getApplicationContext(), "Registro exitoso", Toast.LENGTH_SHORT).show();
 

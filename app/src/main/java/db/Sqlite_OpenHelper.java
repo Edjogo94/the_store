@@ -8,7 +8,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import com.thestore.Product;
 import com.thestore.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Sqlite_OpenHelper extends SQLiteOpenHelper {
 
@@ -84,6 +88,47 @@ public class Sqlite_OpenHelper extends SQLiteOpenHelper {
         db.close();
         return result;
     }
+
+    public List<Product> getProductList() {
+        List<Product> productList = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + context.getResources().getString(R.string.products_table), null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                int nombreProductoIndex = cursor.getColumnIndex(context.getResources().getString(R.string.c_nombre_producto));
+                String nombreProducto = (nombreProductoIndex >= 0) ? cursor.getString(nombreProductoIndex) : "";
+
+                int descripcionIndex = cursor.getColumnIndex(context.getResources().getString(R.string.c_descripcion_producto));
+                String descripcion = (descripcionIndex >= 0) ? cursor.getString(descripcionIndex) : "";
+
+                int categoriaIndex = cursor.getColumnIndex(context.getResources().getString(R.string.c_categoria));
+                String categoria = (categoriaIndex >= 0) ? cursor.getString(categoriaIndex) : "";
+
+                int marcaIndex = cursor.getColumnIndex(context.getResources().getString(R.string.c_marca));
+                String marca = (marcaIndex >= 0) ? cursor.getString(marcaIndex) : "";
+
+                int inventarioIndex = cursor.getColumnIndex(context.getResources().getString(R.string.c_inventario));
+                int inventario = (inventarioIndex >= 0) ? cursor.getInt(inventarioIndex) : 0;
+
+                int precioIndex = cursor.getColumnIndex(context.getResources().getString(R.string.c_precio));
+                double precio = (precioIndex >= 0) ? cursor.getDouble(precioIndex) : 0.0;
+
+                int imagenNombreIndex = cursor.getColumnIndex(context.getResources().getString(R.string.c_imagen_url));
+                String imagenNombre = (imagenNombreIndex >= 0) ? cursor.getString(imagenNombreIndex) : "";
+
+                Product product = new Product(nombreProducto, descripcion, categoria, marca, inventario, precio, imagenNombre);
+                productList.add(product);
+
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+
+        return productList;
+    }
+
 
     public int updateProduct(String nombreProducto, int nuevoInventario, double nuevoPrecio) {
         SQLiteDatabase db = this.getWritableDatabase();

@@ -15,4 +15,11 @@
     <string name="c_precio">precio</string>
     <string name="c_imagen_url">imagen_url</string>
     <string name="products_table">products</string>
+
+    <string-array name="categorias_productos">
+        <item>Electrónica</item>
+        <item>Ropa</item>
+        <item>Zapatos</item>
+        <item>Muebles</item>
+    </string-array>
 </resources>
