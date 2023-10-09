@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">The Store</string>
+    <string name="DATABASE_NAME">TSDB</string>
+    <string name="user_table">user_table</string>
+    <string name="c_nombre_usuario">nombre_usuario</string>
+    <string name="c_email">email</string>
+    <string name="c_nombre_tienda">nombre_tienda</string>
+    <string name="c_descripcion_tienda">descripcion_tienda</string>
+    <string name="c_contrasena">contrasena</string>
+    <string name="c_nombre_producto">nombre_producto</string>
+    <string name="c_descripcion_producto">descripcion_producto</string>
+    <string name="c_categoria">categoria</string>
+    <string name="c_marca">marca</string>
+    <string name="c_inventario">inventario</string>
+    <string name="c_precio">precio</string>
+    <string name="c_imagen_url">imagen_url</string>
+    <string name="products_table">products</string>
 </resources>

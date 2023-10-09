@@ -10,13 +10,15 @@ public class Splash extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        System.out.println("xd");
 
         try {
             Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        }catch (InterruptedException e){
+            finish();
         }
-        System.out.println("xd");
+
+        Intent intent = new Intent(Splash.this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

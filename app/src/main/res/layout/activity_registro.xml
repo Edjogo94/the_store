@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:contentDescription="logo"
+        android:src="@drawable/splash" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:fontFamily="@font/tradegothicboldfont"
+        android:gravity="center"
+        android:text="Registro"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="30sp" />
+
+
+    <EditText
+        android:id="@+id/inputNombreUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="10sp"
+        android:layout_marginRight="80dp"
+        android:background="@drawable/edit_text_rounded_border"
+        android:fontFamily="@font/sabonroman"
+        android:hint="Nombre de Usuario"
+        android:inputType="text"
+        android:padding="8dp" />
+
+    <EditText
+        android:id="@+id/inputEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="10sp"
+        android:layout_marginRight="80dp"
+        android:background="@drawable/edit_text_rounded_border"
+        android:fontFamily="@font/sabonroman"
+        android:hint="Correo Electrónico"
+        android:inputType="textEmailAddress"
+        android:padding="8dp" />
+
+    <EditText
+        android:id="@+id/inputContraseña"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="10sp"
+        android:layout_marginRight="80dp"
+        android:background="@drawable/edit_text_rounded_border"
+        android:fontFamily="@font/sabonroman"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:padding="8dp" />
+
+    <EditText
+        android:id="@+id/inputNombreTienda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="10sp"
+        android:layout_marginRight="80dp"
+        android:background="@drawable/edit_text_rounded_border"
+        android:fontFamily="@font/sabonroman"
+        android:hint="Nombre de la Tienda"
+        android:inputType="text"
+        android:padding="8dp" />
+
+    <EditText
+        android:id="@+id/inputDescripcionTienda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="10sp"
+        android:layout_marginRight="80dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/edit_text_rounded_border"
+        android:fontFamily="@font/sabonroman"
+        android:hint="Descripción de la Tienda"
+        android:inputType="text"
+        android:padding="8dp" />
+
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:text="Registrar" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
